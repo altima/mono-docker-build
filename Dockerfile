@@ -9,6 +9,8 @@ RUN apt update && \
 ENV PREFIX=/mono
 ENV VERSION=5.16.0.179
 
+RUN mkdir /work
+
 ADD https://download.mono-project.com/sources/mono/mono-$VERSION.tar.bz2 /tmp
 RUN tar jxvf /tmp/mono-$VERSION.tar.bz2 -C /work
 RUN cd /work/mono-$VERSION
